@@ -10,23 +10,30 @@ export default function Hero() {
         <div>
           <motion.h1
             className="text-4xl md:text-5xl font-bold leading-tight mb-6"
-            whileHover={{ scale: 1 }}
-            animate={{  transition: { duration: 2, ease: "linear" }, scale: 1.1 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
           >
             Empowering Future Legal Professionals
           </motion.h1>
 
-          <p className="text-lg text-gray-200 mb-8 max-w-lg">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-lg text-gray-200 mb-8 max-w-lg"
+          >
             Participate in competitions, internships, and track your growth.
-          </p>
+          </motion.p>
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
             <Link to="/blogs">
-              <motion.button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition"
-              initial={{opacity:0}}
-              whileInView={{opacity:1}}
-              transition={{duration:1}}
+              <motion.button
+                className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
               >
                 Explore Programs
               </motion.button>
@@ -47,7 +54,6 @@ export default function Hero() {
             loading="eager"
             alt="Legal Illustration"
             className="w-full max-md  rounded-lg shadow-lg"
-            
           />
         </div>
       </div>

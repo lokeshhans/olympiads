@@ -1,10 +1,18 @@
 import { webinars } from "../data/data";
+import { motion } from "framer-motion";
+
 
 export default function Webinars() {
   return (
     <div className="px-6 md:px-16 py-10">
 
       {/* Heading */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-10"
+      >
       <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
         Webinars & Seminars
       </h1>
@@ -12,13 +20,19 @@ export default function Webinars() {
       <p className="text-gray-600 mb-10">
         Join expert-led sessions and enhance your legal knowledge.
       </p>
+      </motion.div>
 
       {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         {webinars.map((webinar, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.4, delay: index * 0.08 }}
+            whileHover={{ y: -6 }}
             className="bg-white shadow-md rounded-lg overflow-hidden hover:-translate-y-2 transition duration-300"
           >
             {/* Image */}
@@ -60,7 +74,7 @@ export default function Webinars() {
               </button>
 
             </div>
-          </div>
+          </motion.div>
         ))}
 
       </div>
