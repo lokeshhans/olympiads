@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
-import Home from "./Pages/Home";
+import Home from "./pages/Home";
 import Highlights from "./pages/Highlights";
 import News from "./pages/News";
 import Podcasts from "./pages/Podcasts";
 import About from "./pages/About";
 import Login from "./pages/Login";
-import Webinars from "./Pages/Webinars";
-import Blogs from "./Pages/Blogs";
-import Rankings from "./Pages/Rankings";
+import Webinars from "./pages/Webinars";
+import Blogs from "./pages/Blogs";
+import Rankings from "./pages/Rankings";
 
 
 function App() {
