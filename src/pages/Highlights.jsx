@@ -7,23 +7,22 @@ const fadeUp = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6 }
-  }
+    transition: { duration: 0.6 },
+  },
 };
 
 const stagger = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.15
-    }
-  }
+      staggerChildren: 0.15,
+    },
+  },
 };
 
 export default function Highlights() {
   return (
     <div className="px-6 md:px-16 py-10">
-
       {/* Heading */}
       <motion.h1
         variants={fadeUp}
@@ -51,7 +50,6 @@ export default function Highlights() {
         animate="show"
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-
         {highlights.map((item, index) => (
           <motion.div
             key={index}
@@ -59,7 +57,6 @@ export default function Highlights() {
             whileHover={{ y: -10, scale: 1.02 }}
             className="bg-white shadow-md rounded-xl overflow-hidden cursor-pointer"
           >
-
             {/* Image Wrapper */}
             <div className="overflow-hidden">
               <motion.img
@@ -69,12 +66,12 @@ export default function Highlights() {
                 className="w-full h-48 object-cover"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.4 }}
+                viewport={{ once: false, amount: 0.2 }}
               />
             </div>
 
             {/* Content */}
             <div className="p-4">
-
               {/* Badge */}
               <motion.span
                 whileHover={{ scale: 1.05 }}
@@ -83,25 +80,17 @@ export default function Highlights() {
                 {item.type}
               </motion.span>
 
-              <h2 className="text-lg font-semibold mt-2 mb-2">
-                {item.title}
-              </h2>
+              <h2 className="text-lg font-semibold mt-2 mb-2">{item.title}</h2>
 
               <p className="text-gray-600 text-sm mb-3 line-clamp-3">
                 {item.desc}
               </p>
 
-              <p className="text-sm text-gray-500">
-                {item.date}
-              </p>
-
+              <p className="text-sm text-gray-500">{item.date}</p>
             </div>
-
           </motion.div>
         ))}
-
       </motion.div>
-
     </div>
   );
-} 
+}

@@ -50,7 +50,7 @@ export default function News() {
           initial={{ height: 0 }}
           whileInView={{ height: "100%" }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount:0.4 }}
           className="absolute left-0 top-0 w-1 bg-blue-900 origin-top"
         />
 

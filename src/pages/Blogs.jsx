@@ -27,7 +27,7 @@ export default function Blogs() {
             key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.4, delay: index * 0.08 }}
             whileHover={{ y: -6 }}
             className="bg-white shadow-md rounded-xl overflow-hidden flex flex-col group cursor-pointer"

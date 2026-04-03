@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 export default function Rankings() {
   return (
     <div className="px-6 md:px-16 py-10">
-
       {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
@@ -27,7 +26,6 @@ export default function Rankings() {
       {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full border-collapse bg-white shadow rounded-lg overflow-hidden">
-
           <thead className="bg-blue-900 text-white">
             <tr>
               <th className="p-4 text-left">College</th>
@@ -63,10 +61,8 @@ export default function Rankings() {
               </motion.tr>
             ))}
           </tbody>
-
         </table>
       </div>
-
     </div>
   );
 }
