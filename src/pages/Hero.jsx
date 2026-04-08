@@ -53,7 +53,7 @@ export default function Hero() {
             src="/hero.webp"
             loading="eager"
             alt="Legal Illustration"
-            className="w-full max-md  rounded-lg shadow-lg"
+            className="w-full max-md  rounded-lg shadow-lg mb-10"
           />
         </div>
       </div>

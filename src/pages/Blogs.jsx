@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Blogs() {
   return (
-    <div className="px-6 md:px-16 py-10 bg-gray-50 min-h-screen">
+    <div className="px-6 md:px-16 py-10 bg-gray-50">
 
       {/* Heading */}
       <motion.div
